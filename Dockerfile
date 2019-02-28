@@ -1,4 +1,4 @@
-FROM p3lim/alpine:3.7
+FROM p3lim/alpine:3.8
 
 # install dependencies
 RUN apk add --no-cache python3 sqlite
@@ -17,5 +17,5 @@ RUN rm -rf /tmp/*
 COPY root/ /
 
 # expose ourselves
-EXPOSE 8080
+EXPOSE 5000
 VOLUME /config
