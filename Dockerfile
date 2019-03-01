@@ -7,6 +7,7 @@ RUN apk add --no-cache python3 sqlite
 RUN apk add --no-cache -t build-deps git
 RUN git clone https://github.com/p3lim/paste /tmp/paste
 RUN pip3 install -r /tmp/paste/requirements.txt
+RUN mkdir /app
 RUN cp -r /tmp/paste/src/* /app
 
 # cleanup
